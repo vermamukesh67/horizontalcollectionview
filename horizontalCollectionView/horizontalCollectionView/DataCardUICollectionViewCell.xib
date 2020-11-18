@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DataCardUICollectionViewCell" customModule="horizontalCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="275" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCs-va-Wdx">
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="170"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PL8-H8-Vet">
+                                <rect key="frame" x="4" y="8" width="263" height="154"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew3-P1-4Dh" customClass="DataCardView" customModule="horizontalCollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="154"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PL8-H8-Vet" secondAttribute="trailing" constant="8" id="37r-7t-u5f"/>
+                            <constraint firstItem="PL8-H8-Vet" firstAttribute="top" secondItem="sCs-va-Wdx" secondAttribute="top" constant="8" id="mTz-fZ-YnJ"/>
+                            <constraint firstItem="PL8-H8-Vet" firstAttribute="leading" secondItem="sCs-va-Wdx" secondAttribute="leading" constant="4" id="pba-vN-RQG"/>
+                            <constraint firstAttribute="bottom" secondItem="PL8-H8-Vet" secondAttribute="bottom" constant="8" id="yfr-RD-KcY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sCs-va-Wdx" secondAttribute="bottom" id="CBu-ww-J5c"/>
+                <constraint firstItem="sCs-va-Wdx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Nr5-H0-2xm"/>
+                <constraint firstItem="sCs-va-Wdx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="o87-HM-2dt"/>
+                <constraint firstAttribute="trailing" secondItem="sCs-va-Wdx" secondAttribute="trailing" id="urw-bx-Lx2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="275" height="170"/>
+            <connections>
+                <outlet property="containerView" destination="sCs-va-Wdx" id="D67-Vu-zjJ"/>
+                <outlet property="fundCardView" destination="ew3-P1-4Dh" id="sz8-W1-Pen"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="76"/>
+        </collectionViewCell>
+    </objects>
+</document>
